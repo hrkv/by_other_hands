@@ -1,0 +1,17 @@
+{
+  "name": "by-other-hands",
+  "version": "0.0.1",
+  "private": true,
+  "description": "By Other Hands — online turn-based tactical 2D game prototype",
+  "scripts": {
+    "dev": "echo \"TODO: implement dev script (client + server)\"",
+    "dev:client": "echo \"TODO: start client dev server\"",
+    "dev:server": "echo \"TODO: start game server\"",
+    "lint": "echo \"TODO: run linters\"",
+    "build": "echo \"TODO: build client and server\"",
+    "test": "echo \"TODO: run tests\""
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
