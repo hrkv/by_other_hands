@@ -4,8 +4,8 @@
   "private": true,
   "description": "By Other Hands — online turn-based tactical 2D game prototype",
   "scripts": {
-    "dev": "echo \"TODO: implement dev script (client + server)\"",
-    "dev:client": "echo \"TODO: start client dev server\"",
+    "dev": "npm run dev:client",
+    "dev:client": "cd client && npm run dev",
     "dev:server": "echo \"TODO: start game server\"",
     "lint": "echo \"TODO: run linters\"",
     "build": "echo \"TODO: build client and server\"",

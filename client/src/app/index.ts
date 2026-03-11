@@ -1,8 +1,15 @@
 // Точка входа клиентского приложения.
-// Конкретный движок/фреймворк будет выбран на следующем шаге.
+// Здесь монтируем React-приложение в DOM.
+
+import { mountApp } from "./main";
 
 export function bootstrapClient() {
-  // TODO: инициализировать движок, создать сцену/поле, привязать UI.
-  // Временная заглушка, чтобы файл не был пустым.
-  console.log("[client] bootstrapClient() is not implemented yet.");
+  const rootElement = document.getElementById("root");
+
+  if (!rootElement) {
+    console.error("[client] Root element #root not found.");
+    return;
+  }
+
+  mountApp(rootElement);
 }
