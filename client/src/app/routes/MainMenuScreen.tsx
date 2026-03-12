@@ -11,11 +11,8 @@ export function MainMenuScreen() {
       <h1>Главное меню</h1>
       {user && <p className="subtitle">Привет, {user.nickname}!</p>}
       <div className="panel menu-buttons">
-        <button type="button" onClick={() => navigate("/rooms/new")}>
-          Новая игра
-        </button>
-        <button type="button" onClick={() => navigate("/rooms")}>
-          Присоединиться
+        <button type="button" onClick={() => navigate("/game/setup")}>
+          Новая партия
         </button>
       </div>
     </div>

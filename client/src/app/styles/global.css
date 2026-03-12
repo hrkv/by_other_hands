@@ -178,3 +178,133 @@ code {
   border-radius: 4px;
 }
 
+.game-board {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.game-board-main {
+  flex: 1 1 auto;
+}
+
+.game-board-legend {
+  flex: 0 0 220px;
+  font-size: 12px;
+  color: #dddddd;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.legend-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.legend-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.legend-list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-swatch {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.legend-label {
+  flex: 1;
+}
+
+.game-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--board-size), 1fr);
+  gap: 4px;
+}
+
+.game-grid-cell {
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 4px;
+  background: #242433;
+  position: relative;
+}
+
+.game-grid-base-1 {
+  background: #2f4f4f;
+}
+
+.game-grid-base-2 {
+  background: #4f2f3a;
+}
+
+.game-grid-mod-sprint {
+  background: #31415c;
+}
+
+.game-grid-mod-wall-h {
+  background: #5c3a31;
+}
+
+.game-grid-mod-wall-v {
+  background: #3a5c31;
+}
+
+.game-grid-mod-time {
+  background: #4b315c;
+}
+
+.game-grid-mod-shuffle {
+  background: #5c5341;
+}
+
+.game-grid-cell-with-token {
+  box-shadow: 0 0 0 1px #f5f5f5;
+}
+
+.game-grid-cell-move {
+  cursor: pointer;
+  box-shadow: 0 0 0 2px #ffe66d;
+}
+
+.game-grid-cell-move:hover {
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+.game-mod-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+.game-token {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: #5b8cff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 200ms ease-out, left 200ms ease-out;
+}
+

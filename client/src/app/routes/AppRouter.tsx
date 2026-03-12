@@ -3,9 +3,8 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { getCurrentUser } from "../services/userApi";
 import { NicknameScreen } from "./NicknameScreen";
 import { MainMenuScreen } from "./MainMenuScreen";
-import { NewRoomScreen } from "./NewRoomScreen";
-import { RoomsListScreen } from "./RoomsListScreen";
-import { RoomPage } from "./RoomPage";
+import { GameSetupScreen } from "./GameSetupScreen";
+import { GameScreen } from "./GameScreen";
 
 function useHasUser(): boolean {
   const user = getCurrentUser();
@@ -45,28 +44,19 @@ export function AppRouter() {
       />
 
       <Route
-        path="/rooms/new"
+        path="/game/setup"
         element={
           <RequireUser>
-            <NewRoomScreen />
+            <GameSetupScreen />
           </RequireUser>
         }
       />
 
       <Route
-        path="/rooms"
+        path="/game"
         element={
           <RequireUser>
-            <RoomsListScreen />
-          </RequireUser>
-        }
-      />
-
-      <Route
-        path="/rooms/:roomId"
-        element={
-          <RequireUser>
-            <RoomPage />
+            <GameScreen />
           </RequireUser>
         }
       />
