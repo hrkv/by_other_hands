@@ -22,7 +22,7 @@ body {
 }
 
 .screen-centered {
-  max-width: 640px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -227,6 +227,33 @@ code {
 
 .legend-label {
   flex: 1;
+}
+
+@media (max-width: 768px) {
+  .screen {
+    padding: 16px 8px;
+  }
+
+  .screen-centered {
+    max-width: 100%;
+  }
+
+  .game-board {
+    flex-direction: column;
+  }
+
+  .game-board-legend {
+    flex: 0 0 auto;
+    margin-top: 4px;
+  }
+
+  .game-grid {
+    gap: 2px;
+  }
+
+  .game-mod-label {
+    font-size: 18px;
+  }
 }
 
 .game-grid {
