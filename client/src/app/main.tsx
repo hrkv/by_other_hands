@@ -6,10 +6,11 @@ import "./styles/global.css";
 
 export function mountApp(container: HTMLElement) {
   const root = createRoot(container);
+  const basename = import.meta.env.BASE_URL || "/";
 
   root.render(
     <React.StrictMode>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <AppRouter />
       </BrowserRouter>
     </React.StrictMode>

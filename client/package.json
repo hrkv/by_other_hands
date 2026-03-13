@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:gh": "vite build --base=/by_other_hands/ --outDir=../docs",
+    "build:gh": "VITE_BASE_PATH=/by_other_hands/ vite build --outDir=../docs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },
